@@ -1,7 +1,10 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-
+// import path from 'path/posix'
+var path = require("path")
 // https://vitejs.dev/config/
+
+
 export default defineConfig({
   plugins: [vue()],
   server: {
@@ -17,6 +20,17 @@ export default defineConfig({
         ws: true,
       }
     },
+  },
+  css: {
+    preprocessorOptions: {
+      less: {
+        modifyVars: {
+          hack: `true; @import (reference) "${path.resolve('src/style/themes/variables.less')}";`,
+        },
+        
+        javascriptEnabled: true,
+      }
+    }
   },
 })
 

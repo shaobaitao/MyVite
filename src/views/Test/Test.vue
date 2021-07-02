@@ -21,14 +21,7 @@ export default {
    
       this.$i18n.locale = this.$i18n.locale === 'zh' ? 'en' : 'zh'
     }
-    // changezh () {
-    //   this.lang = '中文'
-    //   this.$i18n.locale = 'zh'
-    // },
-    // changeen () {
-    //   this.lang = 'english'
-    //   this.$i18n.locale = 'en'
-    // }
+  
   }
 }
 </script>

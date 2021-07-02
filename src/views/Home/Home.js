@@ -20,8 +20,21 @@ export default {
     };
   },
   methods: {
+    changeLaguages () {
+      console.log(this.$i18n.locale)
+   
+      this.$i18n.locale = this.$i18n.locale === 'zh' ? 'en' : 'zh'
+    },
     changeThemeColor(val){
-      this.$store.commit("changeThemeColor",val)
+      if(localStorage.colorTheme){
+        console.log(1);
+        localStorage.colorTheme=localStorage.colorTheme=="light-theme"?"dark-theme":"light-theme"
+        // document.getElementById("app").className = localStorage.colorTheme;
+      }else{
+        console.log(2);
+        localStorage.setItem("colorTheme", "light-theme")
+      }
+      document.getElementById("app").className = localStorage.colorTheme;
     },
     toTest(){
       this.$router.push('/test')

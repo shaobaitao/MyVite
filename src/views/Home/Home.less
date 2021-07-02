@@ -1,8 +1,48 @@
-#btns{
-    display: flex;
-    justify-content: space-between;
-    background: var(--themeColor);
+*{
+  transition: all 0.3s;
+}
+.axiosTest {
+  display: flex;
+  justify-content: space-between;
+}
+.vuexTest{
+  background-color: #6f6f6f;
+  h2{
+    color: @primary-color;
   }
-.van-button{
-    margin: 0 20px;
+}
+.van-button {
+  background-color: @primary-color;
+  border: 1px solid @content-border-color;
+}
+
+.colorTest {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  .content {
+    
+    width: 50vw;
+    height: 140px;
+    background-color: @content-background-color;
+    border: 1px solid @content-border-color;
+  }
+
+  height: 200px;
+  
+  background-color: @primary-background-color;
+
+  h2 {
+    
+    color: @primary-color;
+    background-color: @content-background-color;
+  }
+}
+
+.van-button {
+  transition: all 0.3s;
+  // border:  1px solid @content-border-color;
+  margin: 0 20px;
 }
